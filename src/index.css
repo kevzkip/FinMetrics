@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--theme: #2970ff;
+}
+
+.btn {
+	color: var(--theme);
+	text-align: center;
+	width: 100%;
+	margin: 0.5rem 0rem;
+	padding: 0.5rem !important;
+	background-color: #fff;
+	border: 1px solid var(--theme);
+	border-radius: 0.25rem;
+	cursor: pointer;
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+	height: auto !important;
+}
+
+.btn:hover {
+	background-color: var(--theme);
+	color: #fff;
+	transition: all 0.3s;
+}
+
+.btn-blue {
+	background-color: var(--theme);
+	color: #fff;
+}
+
+.btn-blue:hover {
+	background-color: #fff !important;
+	color: var(--theme) !important;
+	transition: all 0.3s;
+}
+
+.wrapper {
+	background-color: #fff;
+	position: fixed;
+	width: 100vw;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.lds-ripple {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+
+.lds-ripple div {
+	position: absolute;
+	border: 4px solid var(--theme);
+	opacity: 1;
+	border-radius: 50%;
+	animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+.lds-ripple div:nth-child(2) {
+	animation-delay: -0.5s;
+}
+
+@keyframes lds-ripple {
+	0% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	4.9% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 0;
+	}
+	5% {
+		top: 36px;
+		left: 36px;
+		width: 0;
+		height: 0;
+		opacity: 1;
+	}
+	100% {
+		top: 0px;
+		left: 0px;
+		width: 72px;
+		height: 72px;
+		opacity: 0;
+	}
+}
